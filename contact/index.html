@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>TinyPages Web Design - Contact Us</title>
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="jquery.validate.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="menu">
+				<img id="logopic" src="../tinysmall2.png" alt="TinyPages Logo" />
+				<div id="menulinks">
+					<a href="../index.html">HOME</a>
+					<br />
+					<a href="../work/index.html">WHAT WE DO</a>
+					<br />
+					<a href="../portfolio/index.html">WHAT WE'VE DONE</a>
+					<br />
+					<a href="index.html">CONTACT US</a>
+				</div>	
+				<div id="menuicons">
+					<a href="mailto:info@tinypages.ie"><img src="../email.png" title="Email" alt="Email Icon" /></a>
+					<a href="http://www.facebook.com/tinypages"><img src="../facebook.png" title="Facebook" alt="Facebook Icon" /></a>
+					<a href="http://twitter.com/tinypagesweb"><img src="../twitter.png" title="Twitter" alt="Twitter Icon" /></a>
+					<a href="http://www.linkedin.com/pub/sam-cogan/32/340/198"><img src="../linkedin.png" title="LinkedIn" alt="LinkedIn Icon" /></a>
+				</div>
+			</div>
+			<div id="bodywrapper">
+				<div id="bodysection">
+					<h1>Contacting Tinypages:</h1>
+					<br />
+					<p>You can get in contact with us by doing any of the following:</p>
+					<ul>
+						<li>Filling out the contact form below;</li>
+						<li>Sending an email to <a href="mailto:info@tinypages.ie">info@tinypages.ie</a>, along with your query and contact details;</li>
+						<li>Following us on <a href="http://twitter.com/tinypagesweb">Twitter</a>;</li>
+						<li>Or friending us on <a href="http://www.facebook.com/tinypages">Facebook</a>. Don't forget to like the page as well!</li>
+					</ul>
+					<br />
+					<form id="contactform" method="post" action="mailto:info@tinypages.ie">
+						<div>
+							<h2>Contact Form:</h2>
+							<label>
+								<span>Your Name:</span>
+								<input type="text" name="name" />
+							</label>
+							<label>
+								<span>Email Address:</span>
+								<input type="text" name="email" />
+							</label>
+							<label>
+								<span>Phone No:</span>
+								<input type="text" name="phone" />
+							</label>
+							<label>
+								<span>Subject:</span>
+								<input type="text" name="subject" />
+							</label>
+							<label>
+								<span>Message:</span>
+								<textarea id="message" name="message"></textarea>
+							</label>	
+							<br />
+							<input class="button" type="submit" value="Submit Form" />
+							<br />
+							<br />
+							<div id="errors"></div>
+						</div>
+					</form>
+					<script>
+					$(document).ready(function () {
+						$('#contactform').validate({
+							errorLabelContainer: $("#errors"),
+							rules: {
+								name: {
+									required: true,
+									minlength: 2
+								},
+								message: {
+									required: true,
+									minlength: 5
+								},
+							},	
+							 messages: {
+								name: "Please enter your name. ",
+								message: "Please enter a message.",
+							}
+						});
+					});
+					</script>
+				</div>
+				<footer>
+					<p><div class="center">&#169; TinyPages Web Design 2010-2013</div><p>
+				</footer>
+			</div>
+		</div>	
+	</body>
+</html>
